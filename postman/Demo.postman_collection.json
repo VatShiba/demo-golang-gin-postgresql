@@ -1,0 +1,417 @@
+{
+	"info": {
+		"_postman_id": "40e072c8-b935-473d-bbc4-a257bfe82dc3",
+		"name": "Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12139199"
+	},
+	"item": [
+		{
+			"name": "Demo GIN",
+			"item": [
+				{
+					"name": "ping pong",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000",
+							"host": [
+								"localhost"
+							],
+							"port": "3000"
+						}
+					},
+					"response": [
+						{
+							"name": "ping pong",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000",
+									"host": [
+										"localhost"
+									],
+									"port": "3000"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 16 Jun 2023 12:43:21 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "15"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ping\": \"pong\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": null,\n    \"author\": \"test_author\",\n    \"description\": \"test_description\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/books",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Book",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"test_book\",\n    \"author\": \"test_author\",\n    \"description\": \"test_description\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/books",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 16 Jun 2023 13:01:44 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "216"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 5,\n    \"created_at\": \"2023-06-16T20:01:44.092352+07:00\",\n    \"updated_at\": \"2023-06-16T20:01:44.092352+07:00\",\n    \"deleted_at\": \"0001-01-01T00:00:00Z\",\n    \"title\": \"test_book\",\n    \"author\": \"test_author\",\n    \"description\": \"test_description\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Book",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/books",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Book",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/books",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 16 Jun 2023 13:01:14 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "869"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"created_at\": \"2023-06-16T19:44:13.332594+07:00\",\n        \"updated_at\": \"2023-06-16T19:44:13.332594+07:00\",\n        \"deleted_at\": \"0001-01-01T00:00:00Z\",\n        \"title\": \"test_book\",\n        \"author\": \"test_author\",\n        \"description\": \"test_description\"\n    },\n    {\n        \"id\": 2,\n        \"created_at\": \"2023-06-16T19:45:02.685301+07:00\",\n        \"updated_at\": \"2023-06-16T19:45:02.685301+07:00\",\n        \"deleted_at\": \"0001-01-01T00:00:00Z\",\n        \"title\": \"test_book\",\n        \"author\": \"test_author\",\n        \"description\": \"test_description\"\n    },\n    {\n        \"id\": 3,\n        \"created_at\": \"2023-06-16T19:45:37.450643+07:00\",\n        \"updated_at\": \"2023-06-16T19:45:37.450643+07:00\",\n        \"deleted_at\": \"0001-01-01T00:00:00Z\",\n        \"title\": \"test_book\",\n        \"author\": \"test_author\",\n        \"description\": \"test_description\"\n    },\n    {\n        \"id\": 4,\n        \"created_at\": \"2023-06-16T19:46:50.586551+07:00\",\n        \"updated_at\": \"2023-06-16T19:46:50.586551+07:00\",\n        \"deleted_at\": \"0001-01-01T00:00:00Z\",\n        \"title\": \"test_book\",\n        \"author\": \"test_author\",\n        \"description\": \"test_description\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Book by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/books/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"books",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Book by ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/books/:id",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 16 Jun 2023 13:44:43 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "216"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"created_at\": \"2023-06-16T19:44:13.332594+07:00\",\n    \"updated_at\": \"2023-06-16T19:44:13.332594+07:00\",\n    \"deleted_at\": \"0001-01-01T00:00:00Z\",\n    \"title\": \"test_book\",\n    \"author\": \"test_author\",\n    \"description\": \"test_description\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Book by ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"test-update\",\n    \"author\": \"test-author-update\",\n    \"description\": \"test-update\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/books/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"books",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Book by ID",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"test-update\",\n    \"author\": \"test-author-update\",\n    \"description\": \"test-update\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/books/:id",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 16 Jun 2023 13:50:44 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "225"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"created_at\": \"2023-06-16T19:44:13.332594+07:00\",\n    \"updated_at\": \"2023-06-16T20:50:44.240582+07:00\",\n    \"deleted_at\": \"0001-01-01T06:42:04+06:42\",\n    \"title\": \"test-update\",\n    \"author\": \"test-author-update\",\n    \"description\": \"test-update\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Book by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/books/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"books",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "16"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Book by ID",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/books/:id",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "16"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 16 Jun 2023 13:52:44 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"record not found\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
